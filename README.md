@@ -1,16 +1,63 @@
-# React + Vite
+# ⚡ React + Vite Portfolio & Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern, fast, and modular React application built with **Vite 5 and React 18**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 How to Run
 
-## React Compiler
+### 1. Open Terminal in this folder:
+```bash
+cd react-portfolio
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Install Dependencies (`node_modules`):
+```bash
+npm install
+```
 
-## Expanding the ESLint configuration
+### 3. Start the Development Server:
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Open your browser at:
+👉 **`http://localhost:5173/`**
+
+---
+
+## 🧱 Component Hierarchy
+
+```text
+src/
+├── main.jsx              # React DOM entry
+├── App.jsx               # Master state & view switcher (Portfolio vs Admin)
+├── index.css             # Global dark purple glassmorphism tokens
+└── components/
+    ├── Navbar.jsx        # Frosted glass navbar with mobile menu
+    ├── Hero.jsx          # Typewriter effect & avatar ring with purple turban
+    ├── About.jsx         # Philosophy and developer highlight cards
+    ├── Skills.jsx        # Animated progress bars & technology pills
+    ├── Projects.jsx      # Project showcase with hover action buttons
+    ├── Contact.jsx       # Controlled form with Web3Forms email integration
+    ├── Footer.jsx        # Navigation, copyright, and admin login launcher
+    ├── AdminLoginModal.jsx # ID (admin) & Password (admin123) modal
+    └── AdminDashboard.jsx  # Full inbox, metrics, search, and REST API modal
+```
+
+---
+
+## 🔐 Admin Dashboard Login Credentials
+
+- **Admin ID**: `admin`
+- **Password**: `admin123`
+
+---
+
+## 📦 Production Build
+To create an optimized production build for deployment (Netlify, Vercel, or GitHub Pages):
+```bash
+npm run build
+```
+The compiled files will be output into the `dist/` directory.
+
